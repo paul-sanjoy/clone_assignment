@@ -31,7 +31,6 @@ export  function postsReducer(
     }
 }
 
-// Selectors
 export const getAllPosts =state=>state.posts.all;
 export const getErrorPosts =state=>state.posts.isError;
 export const getIsFetchingPosts =state=>state.posts.isFetching;

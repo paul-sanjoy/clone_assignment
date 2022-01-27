@@ -1,5 +1,6 @@
 import React from "react";
 import "./Navbar.css";
+import { Link } from "react-router-dom";
 
 
 const Navbar =()=>{
@@ -10,11 +11,11 @@ const Navbar =()=>{
                     <img src="https://static.99acres.com/universalapp/img/nnacres_white.png" alt="img"/>
                 </div>
                 <div className="Nav-right">
-                    <a className="nav-btn" href="/">Home</a>
-                    <a className="nav-btn"href="/">For Buyers</a>
-                    <a className="nav-btn" href="/">For Owners</a>
-                    <a className="nav-btn" href="/">Post City</a>
-                    <a className="nav-btn" href="/">Post Property</a>
+                    <Link className="nav-btn" to="/">Home</Link>
+                    {/* <Link className="nav-btn" to="/">For Buyers</Link>
+                    <Link className="nav-btn" to="/">For Owners</Link> */}
+                    <Link className="nav-btn" to="/cities">Post City</Link>
+                    <Link className="nav-btn" to="/properties">Post Property</Link>
                 </div>
             </div>
         </>

@@ -1,15 +1,16 @@
 import React from "react";
+import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Navbar from "./Navbar";
 import Searchbar from "./Searchbar";
 import Boxline from "./Boxline";
 import Main from "./Main";
 //import PostsList from "../PostsList";
 
-const Home = () => {
+const Homepage = () => {
 
     return (
         <div>
-            <Navbar />
+            {/* <Navbar /> */}
             <Searchbar />
             <Boxline />
             <Main />
@@ -19,4 +20,4 @@ const Home = () => {
 }
 
 
-export default Home;
+export default Homepage;

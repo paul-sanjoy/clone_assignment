@@ -1,20 +1,27 @@
-import React,{useEffect} from 'react';
-import { useDispatch } from 'react-redux';
-import { fetchPosts } from './redux/posts/actions/fetchAction';
-//import PostsList from './PostsList';
+import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 import './App.css';
-import Home from "./components/Homepage";
+import Navbar from "./components/Navbar";
+import Home from "./routes/Home";
+import City from './routes/City';
+import Property from './routes/Property';
+
 
 function App() {
-  const dispatch = useDispatch()
-  useEffect(()=>{
-    dispatch(fetchPosts())
-  },[])
+  
   return (
     <div className="App ">
-      <Home />
-      {/* <PostsList/> */}
+      <Router>
+        <Navbar/>
+        <Routes>
+          <Route path="/" element={<Home/>}/>
+          <Route path="/properties" element={<Property/>}/>
+          <Route path="/properties/:id" element={<Property/>}/>
+          <Route path="/cities" element={<City/>}/>
+          <Route path="/cities/:id" element={<City/>}/>
+        </Routes>
+      </Router>
     </div>
   );
 }

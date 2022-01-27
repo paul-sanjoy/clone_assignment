@@ -1,0 +1,136 @@
+.city-nav-background{
+    background-color: rgb(31, 31, 255);
+}
+
+.city-nav-btn {
+    margin: 10px;
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+  }
+  
+  .city-nav-btn:hover {
+    color: rgb(124, 122, 255);
+  }
+
+
+
+.city-container{
+    margin-top: 80px;
+    
+}
+.city-main{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 50px;
+}
+.city-main-left{
+padding: 20px;
+width: 50vw;
+}
+
+.firstline{
+    font-size: .9rem;
+  color: rgba(84, 84, 88, 0.932);
+  margin-bottom: 10px;
+  font-weight: 600;
+}
+
+.secondline{
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 10px;
+    display: flex;
+    flex-direction: column;
+  }
+
+
+.city-main-left>img{
+    height:522px;
+    width: 620px;
+}
+.city-input-container{
+    padding: 10px;
+    width: 30vw;
+    border:1px solid rgb(241, 230, 230);
+    border-radius: 10px;
+    margin-top: 20px;
+}
+.container-firstline{
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+.container-secondline{
+    font-size: 1rem;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+.city-inputs{
+    width: 100%;
+    padding: 2rem;
+}
+
+.city-input-items{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    font-weight: 500;
+}
+
+.city-input-items:nth-child(4){
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-top: 20px;
+}
+.city-btn{
+    background-color: rgb(31, 31, 255);
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    width: inherit;
+    text-decoration: none;
+    border-style: none;
+}
+.city-btn:hover{
+    background-color: rgb(0, 0, 185);
+}
+
+
+.city-data{
+    /* width: 100%; */
+    margin: 100px;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    column-gap: 50px;
+}
+
+.city-posts{
+    font-size: 1.2rem;
+    font-weight: 600;
+    background-color: rgb(255, 230, 164, .4);
+    margin-bottom: 50px;
+    border-radius: 10px;
+    line-height: 200%;
+    padding: 50px 0;
+}
+
+.city-posts>button{
+    margin-top: 20px;
+    border-radius: 10px;
+    background-color: rgb(31, 31, 255);
+    color: white;
+    width: 20%;
+}
+
+.city-detail{
+    display: flex;
+    justify-content: space-between;
+    margin: 0  50px;
+}
+
+
+
+
