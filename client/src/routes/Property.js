@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react";
-import {useParams} from "react-router-dom";
+// import {useParams} from "react-router-dom";
 import axios from "axios";
 import { Link } from "react-router-dom";
 import "./Property.css";
 import "../components/Navbar.css";
 import pic from "../images/ppfTabImg.5fdb2015.png";
-import p1 from "../images/p1.jpg";
+
 
 
 const PostProperty = () => {
 
-    let { id } = useParams();
+    // let { id } = useParams();
 
     const [data, setData] = useState({
         title: "",
@@ -75,13 +75,13 @@ const PostProperty = () => {
             })
             .catch(error => console.error("Error"));
 
-        axios.get(`https://fswi-99acres-clone.herokuapp.com/properties/${id}`)
-            .then((res) => {
-                console.log(res.data)
-                // setPost(res.data);
+        // axios.get(`https://fswi-99acres-clone.herokuapp.com/properties/${id}`)
+        //     .then((res) => {
+        //         console.log(res.data)
+        //         // setPost(res.data);
 
-            })
-            .catch(error => console.error("Error"));
+        //     })
+        //     .catch(error => console.error("Error"));
     }
 
 
@@ -118,7 +118,7 @@ const PostProperty = () => {
         return ppost ? (
             ppost.map((ppost) => {
                 return (
-                    <div className="property-data-container">
+                    <div className="property-data-container" key={ppost.id}>
                         {/* <div className="property-image" key={ppost.id}>
                         <img src={p1} alt ="img"/>
                         </div> */}
