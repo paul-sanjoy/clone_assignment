@@ -5,6 +5,7 @@ import { Link } from "react-router-dom";
 import "./Property.css";
 import "../components/Navbar.css";
 import pic from "../images/ppfTabImg.5fdb2015.png";
+import p1 from "../images/p1.jpg";
 
 
 const PostProperty = () => {
@@ -14,8 +15,13 @@ const PostProperty = () => {
     const [data, setData] = useState({
         title: "",
         description: "",
-        price: ""
-        // propertyImage: ""
+        price: "",
+        propertyImage: "",
+        type: "",
+        address: "",
+        pinCode: "",
+        createdAt: "",
+        updatedAt: ""
     });
 
     const formPropertyInput = (e) => {
@@ -36,8 +42,13 @@ const PostProperty = () => {
             {
                 title: data.title,
                 description: data.description,
-                price: data.price
-                // propertyImage: data.propertyImage
+                price: data.price,
+                propertyImage: data.propertyImage,
+                type: data.type,
+                address: data.address,
+                pinCode: data.pinCode,
+                createdAt: data.createdAt,
+                updatedAt: data.updatedAt
             })
             .then((res) => {
                 console.log(res.data);
@@ -107,12 +118,23 @@ const PostProperty = () => {
         return ppost ? (
             ppost.map((ppost) => {
                 return (
-                    <div className="property-posts" key={ppost.id}>
-                        <div className="property-detail"><span>Property id: </span><span>{ppost._id}</span></div>
-                        <div className="property-detail"><span>Property name: </span><span>{ppost.title}</span></div>
-                        <div className="property-detail"><span>Description: </span><span>{ppost.description}</span></div>
-                        <div className="property-detail"><span>Price: </span><span>{ppost.price}</span></div>
+                    <div className="property-data-container">
+                        {/* <div className="property-image" key={ppost.id}>
+                        <img src={p1} alt ="img"/>
+                        </div> */}
+                        <div className="property-posts" key={ppost.id}>
+                            <div className="property-detail"><span className="property-detail-titles">Property id: </span><span>{ppost._id}</span></div>
+                            <div className="property-detail"><span className="property-detail-titles">Property name: </span><span>{ppost.title}</span></div>
+                            <div className="property-detail"><span className="property-detail-titles">Description: </span><span>{ppost.description}</span></div>
+                            <div className="property-detail"><span className="property-detail-titles">Price: </span><span>{ppost.price}</span></div>
+                            <div className="property-detail"><span className="property-detail-titles">Type: </span><span>{ppost.type}</span></div>
+                            <div className="property-detail"><span className="property-detail-titles">Address: </span><span>{ppost.address}</span></div>
+                            <div className="property-detail"><span className="property-detail-titles">Pincode: </span><span>{ppost.pinCode}</span></div>
+                            <div className="property-detail"><span className="property-detail-titles">CreatedAt: </span><span>{ppost.createdAt}</span></div>
+                            <div className="property-detail"><span className="property-detail-titles">updatedAt: </span><span>{ppost.updatedAt}</span></div>
+                        </div>
                     </div>
+                   
                 );
             })
         ) : (
@@ -170,6 +192,22 @@ const PostProperty = () => {
                                 <div className="property-input-items">
                                     <span>Price</span>
                                     <input onChange={formPropertyInput} id="price" value={data.price} type="number" autoComplete="off" ></input>
+                                </div>
+                                <div className="property-input-items">
+                                    <span>Type</span>
+                                    <input onChange={formPropertyInput} id="type" value={data.type} type="text" autoComplete="off" ></input>
+                                </div>
+                                <div className="property-input-items">
+                                    <span>Address</span>
+                                    <input onChange={formPropertyInput} id="address" value={data.address} type="text" autoComplete="off" ></input>
+                                </div>
+                                <div className="property-input-items">
+                                    <span>Pincode</span>
+                                    <input onChange={formPropertyInput} id="pinCode" value={data.pinCode} type="number" autoComplete="off" ></input>
+                                </div>
+                                <div className="property-input-items">
+                                    <span>Property Image</span>
+                                    <input onChange={formPropertyInput} id="propertyImage" value={data.propertyImage} type="file" autoComplete="off" ></input>
                                 </div>
 
                                 <div className="property-input-items">

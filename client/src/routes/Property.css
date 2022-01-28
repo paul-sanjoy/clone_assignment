@@ -79,7 +79,7 @@ width: 50vw;
     font-weight: 500;
 }
 
-.property-input-items:nth-child(4){
+.property-input-items:nth-child(8){
     display: flex;
     justify-content: center;
     width: 100%;
@@ -126,10 +126,19 @@ width: 50vw;
 }
 
 .property-detail{
-    display: flex;
-    justify-content: space-between;
+    display: grid;
+    grid-template-columns: 150px auto;
     margin: 0  50px;
+    font-size: .9rem;
+    text-align: left;
 }
+
+.property-detail-titles{
+    margin-right: 50px;
+    grid-column-start: 1;
+}
+
+
 
 
 
