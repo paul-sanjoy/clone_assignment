@@ -1,4 +1,4 @@
-export  function propertysReducer(
+export  function propertyReducer(
     state = {
         all: [],
         isFetching: false,
